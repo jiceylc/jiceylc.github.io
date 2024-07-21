@@ -16,21 +16,23 @@
   <meta name="author" content="JJICEY_">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="解决 Ubuntu 下 SVN 证书错误的方法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2024/07/21/hello-world/index.html">
+<meta property="og:title" content="需要证书及密码验证问题">
+<meta property="og:url" content="http://example.com/2024/07/21/SVN%E9%9C%80%E8%A6%81%E8%AF%81%E4%B9%A6%E5%8F%8A%E5%AF%86%E7%A0%81%E9%AA%8C%E8%AF%81%E9%97%AE%E9%A2%98/SVN%E9%9C%80%E8%A6%81%E8%AF%81%E4%B9%A6%E5%8F%8A%E5%AF%86%E7%A0%81%E9%AA%8C%E8%AF%81%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="JICEY_">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="解决 Ubuntu 下 SVN 证书错误的方法">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-07-21T08:25:20.688Z">
-<meta property="article:modified_time" content="2024-07-21T08:25:20.688Z">
+<meta property="article:published_time" content="2024-07-21T13:31:55.000Z">
+<meta property="article:modified_time" content="2024-07-21T13:54:45.032Z">
 <meta property="article:author" content="JJICEY_">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="SVN">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Hello World - JICEY_</title>
+  <title>需要证书及密码验证问题 - JICEY_</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -211,7 +213,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="需要证书及密码验证问题"></span>
           
         </div>
 
@@ -222,8 +224,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-07-21 16:25" pubdate>
-          2024年7月21日 下午
+        <time datetime="2024-07-21 21:31" pubdate>
+          2024年7月21日 晚上
         </time>
       </span>
     
@@ -234,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          18 字
+          352 字
         
       </span>
     
@@ -245,7 +247,7 @@
         
         
         
-          1 分钟
+          3 分钟
         
       </span>
     
@@ -290,24 +292,40 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Hello World</h1>
+            <h1 id="seo-header">需要证书及密码验证问题</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2024年7月21日 晚上
+                  
+                
+              </p>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+                <h1 id="问题概览"><a href="#问题概览" class="headerlink" title="问题概览"></a>问题概览</h1><p><strong>问题一</strong><br>Ubuntu 20.04 下使用 SVN ，会报错 SVN 的证书错误，无论是选择接受 <code>t</code> 还是永久接受 <code>p</code>，下次都会要求再次接受；在 kali 或者 Windows 上没有出现该问题。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">Error validating server certificate <span class="hljs-keyword">for</span> <span class="hljs-string">&#x27;https://xxx.xxx.xxx.xxx:443&#x27;</span>:<br> - The certificate has an unknown error.<br>Certificate information:<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+<p><strong>问题二</strong><br>环境同上，SVN 每次都要求输入密码，在 kali 或者 Windows 上没有出现该问题。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">Authentication realm: &lt;https://xxx.xxx.xxx.xxx:443&gt; <span class="hljs-comment">#######xxxxx - silversvn##########</span><br>Password <span class="hljs-keyword">for</span> <span class="hljs-string">&#x27;xxx&#x27;</span>: ****************<br></code></pre></td></tr></table></figure>
+<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><h2 id="证书问题"><a href="#证书问题" class="headerlink" title="证书问题"></a>证书问题</h2><p>SVN 服务器的 TLS 版本为 V1.1，但是 Ubuntu 20.04 默认不再支持 TLS V1.0 和 V1.1</p>
+<p>修改 Ubuntu 的配置 openssl 文件以启用 TLS V1.0</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs bash">root@ubuntu:~# openssl version -d  <span class="hljs-comment"># 配置文件路径                                                    </span><br>OPENSSLDIR: <span class="hljs-string">&quot;/usr/lib/ssl&quot;</span>                                                                     <br>root@ubuntu:~# <span class="hljs-built_in">ls</span> /usr/lib/ssl                                                           <br>certs  misc  openssl.cnf  private  <span class="hljs-comment"># 修改openssl.cnf文件</span><br>root@ubuntu:~# vim /usr/lib/ssl/openssl.cnf<br><br><span class="hljs-comment"># 文件头添加</span><br>openssl_conf = default_conf  <br><br><span class="hljs-comment"># 文件末添加</span><br>[default_conf]<br>ssl_conf = ssl_sect<br>[ssl_sect]<br>system_default = ssl_default_sect<br>[ssl_default_sect]<br>MinProtocol = TLSv1<br>CipherString = DEFAULT:@SECLEVEL=1<br></code></pre></td></tr></table></figure>
+<h2 id="输入密码"><a href="#输入密码" class="headerlink" title="输入密码"></a>输入密码</h2><p>ubuntu 20.04 的 SVN 默认版本为 1.13，不允许明文存储密码</p>
+<h3 id="解决方法一"><a href="#解决方法一" class="headerlink" title="解决方法一"></a>解决方法一</h3><p>每次输入添加账户信息如 <code>svn up --username xxx --passwd xxx</code> 或对 svn 进行降级</p>
+<h3 id="解决方法二"><a href="#解决方法二" class="headerlink" title="解决方法二"></a>解决方法二</h3><p>使用 gpg-agent 进行记录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt-get install gpg-agent<br><br>ps aux <br>... /usr/bin/gpg-agent --supervised<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
+<p>设置环境变量，登录默认运行，全局配置可修改 &#x2F;etc&#x2F;profile，个人配置 ~&#x2F;.bashrc</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> GPG_TTY=$(<span class="hljs-built_in">tty</span>)<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
+<p>svn 设置 </p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-comment"># ~/.subversion/config</span><br><span class="hljs-attr">password-stores</span> = gpg-agent<br><br><span class="hljs-comment"># ~/.subversion/servers</span><br><span class="hljs-attr">store-passwords</span> = <span class="hljs-literal">yes</span><br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/543719863">Ubuntu 20.04 SVN报错</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/lanzhiwen/article/details/129090699">ubuntu svn 不支持明文保存密码 svn 保存密码</a><br><a target="_blank" rel="noopener" href="https://www.coder.work/article/6855260">svn - 使用 GPG-Agent 的 Subversion HTTPS 密码缓存？ - IT工具网</a></p>
 
                 
               </div>
@@ -316,6 +334,36 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="category-chain-item">环境配置</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
+      
+        <a href="/tags/SVN/" class="print-no-link">#SVN</a>
+      
+    </div>
   
 </div>
 
@@ -325,8 +373,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
-      <div>http://example.com/2024/07/21/hello-world/</div>
+      <div>需要证书及密码验证问题</div>
+      <div>http://example.com/2024/07/21/SVN需要证书及密码验证问题/SVN需要证书及密码验证问题/</div>
     </div>
     <div class="license-meta">
       
